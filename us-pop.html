@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미국 팝 씬</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #04050f;
+        --accent: #ff7da1;
+        --accent-2: #63f0ff;
+        --glass: rgba(255, 255, 255, 0.08);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Poppins", "Noto Sans KR", sans-serif;
+        color: #f6f7ff;
+        background: radial-gradient(circle at 20% 20%, #1e1847, var(--bg)),
+          radial-gradient(circle at 80% 0%, rgba(99, 240, 255, 0.18), transparent),
+          var(--bg);
+      }
+      header {
+        padding: 40px 20px 20px;
+        text-align: center;
+      }
+      header img {
+        width: 120px;
+        margin-bottom: 24px;
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+      }
+      header h1 {
+        margin: 0;
+        font-size: clamp(2.8rem, 6vw, 4.3rem);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      header p {
+        margin-top: 18px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        background: rgba(4, 5, 15, 0.85);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .nav__item {
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      }
+      .nav__item:hover {
+        border-color: rgba(255, 255, 255, 0.4);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      .nav__item--active {
+        border-color: var(--accent);
+        color: var(--accent);
+        box-shadow: 0 0 18px rgba(255, 125, 161, 0.25);
+      }
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px 80px;
+      }
+      .glass {
+        border-radius: 28px;
+        padding: 36px;
+        background: var(--glass);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+      }
+      .glass + .glass {
+        margin-top: 32px;
+      }
+      .glass h2 {
+        margin: 0 0 16px;
+        color: var(--accent-2);
+        font-size: 1.8rem;
+      }
+      .glass p {
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+        margin-top: 32px;
+      }
+      .card {
+        padding: 24px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+      }
+      .card h3 {
+        margin-top: 0;
+        color: var(--accent);
+        font-size: 1.3rem;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 999px;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+      .list li {
+        padding: 14px 18px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      footer {
+        text-align: center;
+        padding: 24px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+        alt="미국 국기"
+      />
+      <h1>American Pop Vibes</h1>
+      <p>힙합, R&amp;B, 일렉트로닉이 뒤섞인 글로벌 팝의 심장</p>
+    </header>
+
+    <nav>
+      <a class="nav__item" href="index.html">K-POP 홈</a>
+      <a class="nav__item nav__item--active" href="us-pop.html">미국 팝</a>
+      <a class="nav__item" href="uk-pop.html">영국 팝</a>
+      <a class="nav__item" href="jp-pop.html">일본 팝</a>
+      <a class="nav__item" href="latin-pop.html">라틴 팝</a>
+    </nav>
+
+    <main>
+      <section class="glass">
+        <div class="pill">Billboard Culture</div>
+        <h2>사운드 DNA</h2>
+        <p>
+          미국 팝은 소울, 가스펠, 블루스에서 뿌리를 뻗어 랩, 트랩, EDM까지 확장된
+          실험성을 특징으로 합니다. 빌보드 차트와 슈퍼볼 하프타임 쇼에서 볼 수 있듯
+          서사형 퍼포먼스와 스케일이 압도적이며, 기술과 트렌드가 결합해 새로운 장르가
+          끊임없이 탄생합니다.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>크로스오버</h3>
+            <p>컨트리 × 힙합, 팝 × 라틴 등 장르 경계가 사라진 협업이 잦습니다.</p>
+          </article>
+          <article class="card">
+            <h3>슈퍼 프로듀서</h3>
+            <p>Max Martin, Jack Antonoff 같은 프로듀서가 사운드 트렌드를 주도합니다.</p>
+          </article>
+          <article class="card">
+            <h3>공연 스케일</h3>
+            <p>Coachella, Lollapalooza 등 대형 페스티벌이 실험적 무대를 구현합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="glass">
+        <h2>대표 아티스트 &amp; 무브먼트</h2>
+        <ul class="list">
+          <li>팝 디바: 비욘세, 테일러 스위프트, 올리비아 로드리고</li>
+          <li>힙합 &amp; R&amp;B: 켄드릭 라마, Doja Cat, The Weeknd</li>
+          <li>밴드 &amp; 얼터너티브: Imagine Dragons, Paramore</li>
+          <li>미디어 믹스: TikTok 바이럴과 스트리밍 데이터가 히트곡을 결정</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>© 2025 Global Pop Atlas — 미국 팝</footer>
+  </body>
+</html>
+

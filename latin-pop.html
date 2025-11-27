@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라틴 팝 씬</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #03080f;
+        --accent: #ffb347;
+        --accent-2: #7bffac;
+        --glass: rgba(255, 255, 255, 0.08);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Poppins", "Noto Sans KR", sans-serif;
+        color: #fffef8;
+        background: radial-gradient(circle at 20% 20%, #211b45, var(--bg)),
+          radial-gradient(circle at 80% 0%, rgba(255, 179, 71, 0.25), transparent),
+          var(--bg);
+      }
+      header {
+        padding: 40px 20px 20px;
+        text-align: center;
+      }
+      header img {
+        width: 160px;
+        margin-bottom: 24px;
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+      }
+      header h1 {
+        margin: 0;
+        font-size: clamp(2.8rem, 6vw, 4.3rem);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      header p {
+        margin-top: 18px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        background: rgba(3, 8, 15, 0.85);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .nav__item {
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      }
+      .nav__item:hover {
+        border-color: rgba(255, 255, 255, 0.4);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      .nav__item--active {
+        border-color: var(--accent);
+        color: var(--accent);
+        box-shadow: 0 0 18px rgba(255, 179, 71, 0.25);
+      }
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px 80px;
+      }
+      .glass {
+        border-radius: 28px;
+        padding: 36px;
+        background: var(--glass);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+      }
+      .glass + .glass {
+        margin-top: 32px;
+      }
+      .glass h2 {
+        margin: 0 0 16px;
+        color: var(--accent-2);
+        font-size: 1.8rem;
+      }
+      .glass p {
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+        margin-top: 32px;
+      }
+      .card {
+        padding: 24px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+      }
+      .card h3 {
+        margin-top: 0;
+        color: var(--accent);
+        font-size: 1.3rem;
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+      .list li {
+        padding: 14px 18px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      footer {
+        text-align: center;
+        padding: 24px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Latin_America_%28orthographic_projection%29.svg"
+        alt="라틴 아메리카 지도"
+      />
+      <h1>Latin Pop Pulse</h1>
+      <p>스패니시·포르투갈 리듬과 어반 사운드가 결합한 글로벌 웨이브</p>
+    </header>
+
+    <nav>
+      <a class="nav__item" href="index.html">K-POP 홈</a>
+      <a class="nav__item" href="us-pop.html">미국 팝</a>
+      <a class="nav__item" href="uk-pop.html">영국 팝</a>
+      <a class="nav__item" href="jp-pop.html">일본 팝</a>
+      <a class="nav__item nav__item--active" href="latin-pop.html">라틴 팝</a>
+    </nav>
+
+    <main>
+      <section class="glass">
+        <h2>사운드 DNA</h2>
+        <p>
+          라틴 팝은 살사, 바차타, 꾸엠비아, 삼바의 리듬에 레게톤 비트를 더해 글로벌
+          스트리밍을 장악했습니다. 스페인어·포르투갈어 가사가 가진 리드미컬한 흐름과
+          퍼커션 중심의 사운드가 강렬한 몰입감을 만들며, 댄스와 비주얼 스토리텔링이
+          필수 요소로 자리합니다.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Reggaeton 2.0</h3>
+            <p>Bad Bunny, J Balvin이 주도한 멜로딕·미드템포 사운드로 진화.</p>
+          </article>
+          <article class="card">
+            <h3>Urban Tropical</h3>
+            <p>EDM과 라틴 퍼커션을 결합해 클럽 친화적 트랙을 제작.</p>
+          </article>
+          <article class="card">
+            <h3>Regional Fusion</h3>
+            <p>멕시코 코리도, 브라질 펑크가 팝과 믹스되며 새로운 하위장르를 창출.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="glass">
+        <h2>주요 아티스트 &amp; 트렌드</h2>
+        <ul class="list">
+          <li>슈퍼스타: Bad Bunny, Karol G, Rosalía, Anitta</li>
+          <li>밴드/듀오: CNCO, Morat, Bomba Estéreo</li>
+          <li>페스티벌: Viña del Mar, Lollapalooza Chile, Rock in Rio</li>
+          <li>트렌드: TikTok 댄스 챌린지와 스페인어 영어 혼용 가사</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>© 2025 Global Pop Atlas — 라틴 팝</footer>
+  </body>
+</html>
+

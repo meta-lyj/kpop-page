@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일본 팝 씬</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #05040d;
+        --accent: #ff6b7f;
+        --accent-2: #79ffe1;
+        --glass: rgba(255, 255, 255, 0.08);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Poppins", "Noto Sans KR", sans-serif;
+        color: #fdfdff;
+        background: radial-gradient(circle at 20% 20%, #211445, var(--bg)),
+          radial-gradient(circle at 80% 0%, rgba(255, 107, 127, 0.25), transparent),
+          var(--bg);
+      }
+      header {
+        padding: 40px 20px 20px;
+        text-align: center;
+      }
+      header img {
+        width: 120px;
+        margin-bottom: 24px;
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+      }
+      header h1 {
+        margin: 0;
+        font-size: clamp(2.8rem, 6vw, 4.3rem);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      header p {
+        margin-top: 18px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        background: rgba(5, 4, 13, 0.85);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .nav__item {
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      }
+      .nav__item:hover {
+        border-color: rgba(255, 255, 255, 0.4);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      .nav__item--active {
+        border-color: var(--accent);
+        color: var(--accent);
+        box-shadow: 0 0 18px rgba(255, 107, 127, 0.25);
+      }
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px 80px;
+      }
+      .glass {
+        border-radius: 28px;
+        padding: 36px;
+        background: var(--glass);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+      }
+      .glass + .glass {
+        margin-top: 32px;
+      }
+      .glass h2 {
+        margin: 0 0 16px;
+        color: var(--accent-2);
+        font-size: 1.8rem;
+      }
+      .glass p {
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+        margin-top: 32px;
+      }
+      .card {
+        padding: 24px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+      }
+      .card h3 {
+        margin-top: 0;
+        color: var(--accent);
+        font-size: 1.3rem;
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+      .list li {
+        padding: 14px 18px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      footer {
+        text-align: center;
+        padding: 24px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg"
+        alt="일본 국기"
+      />
+      <h1>J-Pop Spectrum</h1>
+      <p>아이돌, 시티팝, 애니송이 공존하는 하이브리드 컬처</p>
+    </header>
+
+    <nav>
+      <a class="nav__item" href="index.html">K-POP 홈</a>
+      <a class="nav__item" href="us-pop.html">미국 팝</a>
+      <a class="nav__item" href="uk-pop.html">영국 팝</a>
+      <a class="nav__item nav__item--active" href="jp-pop.html">일본 팝</a>
+      <a class="nav__item" href="latin-pop.html">라틴 팝</a>
+    </nav>
+
+    <main>
+      <section class="glass">
+        <h2>사운드 DNA</h2>
+        <p>
+          일본 팝은 시티팝, 비주얼 록, 아이돌 J-POP, 애니송 등 다층적인 장르가
+          동시에 발전해 독특한 스펙트럼을 형성합니다. 보컬로이드 문화가 전세계
+          프로슈머와 연결되고, 하츠네 미쿠 콘서트처럼 홀로그램 공연이 일상화되어
+          기술과 음악이 자연스럽게 결합됩니다.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Citypop Revival</h3>
+            <p>유튜브·스트리밍을 통해 80s 시티팝이 역주행하며 신세대 감성으로 재편.</p>
+          </article>
+          <article class="card">
+            <h3>Idol Ecosystem</h3>
+            <p>AKB48식 극장형 시스템과 팬 참여형 프로듀싱이 산업을 지탱.</p>
+          </article>
+          <article class="card">
+            <h3>Anime Sync</h3>
+            <p>애니 오프닝·엔딩 곡이 차트 진입과 투어 성과에 직접적인 영향을 줌.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="glass">
+        <h2>주요 아티스트 &amp; 트렌드</h2>
+        <ul class="list">
+          <li>아이돌/보이그룹: King &amp; Prince, JO1, BE:FIRST</li>
+          <li>싱어송라이터: 요아소비, 요루시카, 후지이 카제</li>
+          <li>록/밴드: RADWIMPS, Official髭男dism, ONE OK ROCK</li>
+          <li>크리에이터: 보컬로이드 P, VTuber 음악 레이블, 니코니코 씬</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>© 2025 Global Pop Atlas — 일본 팝</footer>
+  </body>
+</html>
+
